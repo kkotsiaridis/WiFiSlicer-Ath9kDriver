@@ -32,6 +32,7 @@ the following pictures(Figures 1,2,3),showing the APs and their respective STAs:
 
 
 The ﬁles in which we added functionality are the below:
+
 **COORDINATOR**
 - net/mac80211/tx.c
 
