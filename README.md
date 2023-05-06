@@ -1,4 +1,5 @@
-﻿Project Wireless Communications
+﻿
+Home WiFi Slicer using Ath9k driver
 ===============
 
 Project’s Purpose
@@ -23,11 +24,11 @@ dynamically change the priority of the other two links using conﬁgured beacon
 packets. The topology of the other nodes is depicted in 
 the following pictures(Figures 1,2,3),showing the APs and their respective STAs:
 
-[Figure 1](files/images/figure1.png)
-
-[Figure 2](files/images/figure2.png)
-
-[Figure 3](files/images/figure3.png)
+<p align="center">
+  <img src="files/images/figure1.png" />
+  <img src="files/images/figure2.png" />
+  <img src="files/images/figure3.png" />
+</p>
 
 
 The ﬁles in which we added functionality are the below:
@@ -88,7 +89,7 @@ net/mac80211/tx.c . The topology of this scenario is shown in Figure 1.
 
 For the second scenario we had to implement two diﬀerent sub-scenarios:
 
-` `1) The goal of this sub-scenario is to add one more link to the experiment.
+1. The goal of this sub-scenario is to add one more link to the experiment.
 This new one has SSID = INTERFIERER. This scenario starts with HOME
 and HOTSPOT sharing the channel equally for 30 seconds. After these 30 sec-
 onds the third link connects to this channel and, without anyone determining
@@ -107,7 +108,7 @@ the HOTSPOT oﬀ the air with AIFS = 255 and give priority to HOME, with
 AIFS = 1, over INTERFIERER which has the default AIFS = 2.
 
 
-` `2) The goal of this second scenario is to add INTERFIERER to the list of
+2. The goal of this second scenario is to add INTERFIERER to the list of
 links that the COORDINATOR has power over, at the time of its appearance.
 In this scenario after the 30 seconds that pass with HOME and HOTSPOT
 alone in the channel, INTERFIERER connects and the new priorities on the
