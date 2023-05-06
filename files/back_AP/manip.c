@@ -43,13 +43,11 @@ int main(int argc, char const *argv[]){
 		
 		memset(cmd,'\0',strlen(cmd));
 		strcat(cmd,"tcpdump -G 2 -W 1 -i mon0 -n \"broadcast\" -w test.pcap");
-		//printf("system: %s\n", cmd);
 		system(cmd);
 
 		memset(cmd,'\0',strlen(cmd));
 		strcat(cmd,"hexdump -C test.pcap | cut -c 62-77 > ");
 		strcat(cmd,file);
-		//printf("system: %s\n", cmd);
 		system(cmd);
 
 		fd = fopen(file, "r");
@@ -158,30 +156,7 @@ int main(int argc, char const *argv[]){
 		aifs_[2] = digit;
 		aifs = i+aifs;
 
-		aifs_[3] = '\0';
-
-		
-		/*if(aifs>=0 && aifs <=9){
-			
-			i = i+aifs*10;
-
-			digit = pos[4];
-			aifs = digit - '0';
-			if(aifs>=0 && aifs <=9){
-				aifs_[2] = digit;
-				aifs = i+aifs;
-			}
-			else{
-				aifs = i/10;
-				aifs_[2] = '\0';
-			}
-		}
-		else{
-			aifs = i/100;
-			aifs_[1] = '\0';
-			aifs_[2] = '\0';
-		}*/
-		
+		aifs_[3] = '\0';		
 		
 		printf("aifs: %d\n",aifs);
 		
