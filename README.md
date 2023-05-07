@@ -1,5 +1,5 @@
 ﻿
-Home WiFi Slicer using Ath9k driver
+WiFi Slicer using Ath9k driver
 ===============
 
 Project’s Purpose
